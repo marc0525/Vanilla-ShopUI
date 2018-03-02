@@ -135,13 +135,13 @@ public $Blocks = [
 	
   public $Mobs = [
     "ICON" => ["Mobs",52,0],
-    "Blaze" => [383,43,50000,1000],
     "Stray" => [383,46,50000,1000],
     "Skeleton" => [383,34,50000,1000],
     "Zombie" => [383,32,50000,1000],
     "Husk" => [383,47,50000,1000],
     "Zombie_Pigman" => [383,36,50000,1000],
     "Creeper" => [383,33,50000,1000],
+    "Iron Golem" => [383,20,500000,250000],
     "Mob Spawner" => [52,0,55000,2000]
   ];
 
@@ -185,7 +185,7 @@ public $Blocks = [
   }
 
   public function sendMainShop(Player $player){
-    $ui = new SimpleForm("§2Aversion§cShop","       §aPurchase and Sell items Here!");
+    $ui = new SimpleForm("§l§bOmicron§4PE §cShop","       §aPurchase and Sell items Here!");
     foreach($this->item as $category){
       if(isset($category["ICON"])){
         $rawitemdata = $category["ICON"];
@@ -202,7 +202,7 @@ public $Blocks = [
   }
 
   public function sendShop(Player $player, $id){
-    $ui = new SimpleForm("§2Aversion§cShop","       §aPurchase and Sell items Here!");
+    $ui = new SimpleForm("§l§bOmicron§4PE §cShop","       §aPurchase and Sell items Here!");
     $ids = -1;
     foreach($this->item as $category){
       $ids++;
